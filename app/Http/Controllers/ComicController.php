@@ -15,7 +15,7 @@ class ComicController extends Controller
         return view('home', $data);
     }
 
-    public function detailComic($id) {
+    public function show($id) {
 
         $comics = config('comics');
     
