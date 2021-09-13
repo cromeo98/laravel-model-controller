@@ -4,6 +4,20 @@
     margin: 0;
 }
 
+.clear-fix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
 .container{
     max-width: 1170px;
     margin: auto;

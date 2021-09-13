@@ -4,6 +4,20 @@
   margin: 0;
 }
 
+.clear-fix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
 .container {
   max-width: 1170px;
   margin: auto;
@@ -17,13 +31,45 @@ li {
   list-style-type: none;
 }
 
-main {
+main .list-of-comics-container {
   background-color: #1c1c1c;
 }
+
 main .jumbo {
   background-image: url("/img/jumbotron.jpg");
   background-size: cover;
   height: 350px;
+}
+
+main .detail-comic-container {
+  background-color: #fff;
+  max-width: 850px;
+  margin: auto;
+  padding-top: 45px;
+}
+
+main .detail-comic-container .details-container {
+  width: 70%;
+}
+
+main .detail-comic-container .details-container h2 {
+  color: #003f65;
+  padding-bottom: 15px;
+}
+
+main .detail-comic-container .details-container .availability-container {
+  padding: 10px 20px;
+  background-color: #55ba59;
+}
+
+main .detail-comic-container .details-container .description {
+  padding-top: 15px;
+}
+
+main .detail-comic-container .adv-container {
+  max-width: 30%;
+  text-transform: uppercase;
+  padding-left: 15px;
 }
 
 .card-container {
@@ -32,12 +78,14 @@ main .jumbo {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .card-container .card {
   flex-basis: calc((100% / 12) * 2);
   max-width: calc((100% / 12) * 2);
   padding: 25px;
   color: white;
 }
+
 .card-container .card img {
   max-width: 150px;
   max-height: 150px;
@@ -48,6 +96,7 @@ main .jumbo {
   background-color: #0282f9;
   text-align: right;
 }
+
 .top-header span {
   color: white;
   padding-left: 50px;
@@ -59,12 +108,17 @@ main .jumbo {
   justify-content: space-between;
   align-items: center;
 }
-.bottom-header .container .logo, .bottom-header .container .search-bar {
+
+.bottom-header .container .logo,
+.bottom-header .container .search-bar {
   width: 15%;
 }
+
 .bottom-header .container .nav-bar li {
   display: inline-block;
 }
+
 .bottom-header .container .nav-bar li a {
   text-decoration: none;
 }
+
