@@ -4,7 +4,7 @@
 @section('content')
 
     <div>
-        <h2>{{$comicsSerie['title']}}</h2>
+        <h2>{{$comicsSeries['title']}}</h2>
         <p></p>
     </div>
 
