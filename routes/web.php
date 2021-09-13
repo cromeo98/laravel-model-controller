@@ -13,23 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'ComicController@homepage')->name('homepage');
 
-    $comics = config('comics');
-
-    $data = ['comicsSeries' => $comics];
-
-    return view('home', $data);
-})->name('homepage');
-
-Route::get('/detail/{id}', function ($id) {
-
-    $comics = config('comics');
-
-    $data = ['comicsSerie' => $comics[$id]];
-
-    return view('detail', $data);
-})->name('detail-comic');
+Route::get('/detail/{id}', 'ComicController@detailComic')->name('detail-comic');
 
 Route::get('/characters', 'StaticController@characters')->name('characters');
 
