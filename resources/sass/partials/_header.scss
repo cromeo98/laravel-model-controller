@@ -1,0 +1,31 @@
+.top-header{
+    height: 20px;
+    background-color: $dc-blue;
+    text-align: right;
+
+    span{
+        color: white;
+        padding-left: 50px;
+        font-size: 12px;
+    }
+}
+
+.bottom-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo, .search-bar{
+        width: 15%;
+    }
+
+    .nav-bar{
+        li{
+            display: inline-block;
+
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}

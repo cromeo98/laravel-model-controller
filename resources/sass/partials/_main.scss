@@ -1,0 +1,28 @@
+main{
+    background-color: #1c1c1c;
+
+    .jumbo{
+        background-image: url('/img/jumbotron.jpg');
+        background-size: cover;
+        height: 350px;
+    }
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .card{
+        flex-basis: calc((100% / 12) * 2);
+        max-width: calc((100% / 12) * 2);
+        padding: 25px;
+        color: white;
+
+        img{
+            max-width: 150px;
+            max-height: 150px;
+        }
+    }
+}
