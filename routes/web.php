@@ -22,42 +22,31 @@ Route::get('/', function () {
     return view('home', $data);
 })->name('homepage');
 
-Route::get('/characters', function () {
-    return view('characters');
-})->name('characters');
+Route::get('/detail/{id}', function ($id) {
 
-Route::get('/comics', function () {
-    return view('comics');
-})->name('comics');
+    $comics = config('comics');
 
-Route::get('/movies', function () {
-    return view('movies');
-})->name('movies');
+    $data = ['comicsSerie' => $comics[$id]];
 
-Route::get('/tv', function () {
-    return view('tv');
-})->name('tv');
+    return view('detail', $data);
+})->name('detail-comic');
 
-Route::get('/games', function () {
-    return view('games');
-})->name('games');
+Route::get('/characters', 'StaticController@characters')->name('characters');
 
-Route::get('/collectibles', function () {
-    return view('collectibles');
-})->name('collectibles');
+Route::get('/comics', 'StaticController@comics')->name('comics');
 
-Route::get('/videos', function () {
-    return view('videos');
-})->name('videos');
+Route::get('/movies', 'StaticController@movies')->name('movies');
 
-Route::get('/fans', function () {
-    return view('fans');
-})->name('fans');
+Route::get('/tv', 'StaticController@tv')->name('tv');
 
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
+Route::get('/games', 'StaticController@games')->name('games');
 
-Route::get('/shop', function () {
-    return view('shop');
-})->name('shop');
+Route::get('/collectibles', 'StaticController@collectibles')->name('collectibles');
+
+Route::get('/videos', 'StaticController@videos')->name('videos');
+
+Route::get('/fans', 'StaticController@fans')->name('fans');
+
+Route::get('/news', 'StaticController@news')->name('news');
+
+Route::get('/shop', 'StaticController@shop')->name('shop');
