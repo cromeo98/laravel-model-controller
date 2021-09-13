@@ -29,10 +29,8 @@ class ComicController extends Controller
 
     public function show($id) {
 
-        $comics = $comicsSeries = Comic::all();
-    
-        $data = ['comicsSeries' => $comics[$id]];
-    
-        return view('detail', $data);
+        $comicsSeries = Comic::where('id', $id)->first();
+
+        return view('detail', compact('comicsSeries'));
     }
 }
